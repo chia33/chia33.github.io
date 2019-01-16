@@ -1,0 +1,55 @@
+---
+layout:     post
+title:      "socks5代理"
+#subtitle:   " \"\""
+date:       2019-01-16 15:00:00
+author:     "Chia"
+tags:
+    - socks5
+---
+
+> “socks5代理搭建”
+
+### 工具
+
+* 一台海外服务器
+* [dante](http://www.inet.no/dante/)
+* [goproxy](https://github.com/snail007/goproxy) 
+* [switchyomega](https://www.switchyomega.com/)
+
+#### dante
+socks5代理服务  
+基本配置
+```
+logoutput: syslog stdout /var/log/sockd.log
+logoutput: stderr
+
+external: eth0
+socksmethod: pam.username
+user.unprivileged: nobody
+user.libwrap: nobody
+
+client pass {
+        from: 0.0.0.0/0 to: 0.0.0.0/0
+}
+
+socks pass {
+        from: 0.0.0.0/0 to: 0.0.0.0/0
+        protocol: tcp udp
+        socksmethod: pam.username
+        log: connect disconnect
+}
+
+socks block {
+        from: 0.0.0.0/0 to: 0.0.0.0/0
+        log: connect error
+}
+
+```
+
+#### goproxy
+浏览器不支持带认证的socks5代理，用goproxy做二级代理，转成本地socks5代理
+
+#### switchyomega
+chrome的插件，智能切换代理，[在线规则列表](https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt)
+
