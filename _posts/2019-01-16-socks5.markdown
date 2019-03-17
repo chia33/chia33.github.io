@@ -14,7 +14,7 @@ tags:
 
 * 一台海外服务器
 * [dante](http://www.inet.no/dante/)
-* [goproxy](https://github.com/snail007/goproxy) 
+* [goproxy](https://github.com/snail007/goproxy) 或 [ccproxy](http://www.ccproxy.com/) 
 * [switchyomega](https://www.switchyomega.com/)
 
 #### dante
@@ -47,8 +47,8 @@ socks block {
 
 ```
 
-#### goproxy
-浏览器不支持带认证的socks5代理，用goproxy做二级代理，转成本地socks5代理
+#### goproxy 或 ccproxy
+浏览器不支持带认证的socks5代理，用goproxy或ccproxy做二级代理，转成本地socks5代理
 
 #### switchyomega
 chrome的插件，智能切换代理，[在线规则列表](https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt)

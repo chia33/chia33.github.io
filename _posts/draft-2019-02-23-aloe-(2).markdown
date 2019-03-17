@@ -1,0 +1,31 @@
+---
+layout:     post
+title:      "aloe cms系统（二） - 技术选型"
+subtitle:   " \"技术选型\""
+date:       2019-02-23 18:00:00
+author:     "Chia"
+tags:
+    - aloe
+    - cms
+---
+
+> “aloe cms系统”
+
+### 服务端
+
+* [koa](https://koajs.com/) http服务框架
+* [koa-router](https://github.com/ZijianHe/koa-router) http服务路由
+* [mongodb](https://www.mongodb.com/) 数据库
+* [dotenv](https://github.com/motdotla/dotenv) 环境配置
+* [mongoose](https://mongoosejs.com/) mongodb连接库
+
+
+### 客户端
+
+* [create-react-app](https://github.com/facebook/create-react-app) react工程脚手架
+* [react-router](https://github.com/ReactTraining/react-router) react前端路由
+* [redux](https://github.com/reduxjs/redux) react前端全局状态管理
+* [react-redux](https://github.com/reduxjs/react-redux) 组合react和redux
+* [redux-thunk](https://github.com/reduxjs/redux-thunk) redux异步action中间件
+* [ant-design](https://github.com/ant-design/ant-design/) UI库
+* [less](https://github.com/less/less-docs) css预处理语言
